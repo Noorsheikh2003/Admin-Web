@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/resident.css">
+</head>
+
+<body onload="loadLayout()">
+
+    <div id="sidebar"></div>
+
+    <div class="main">
+
+        <div id="navbar"></div>
+
+        <div class="content">
+
+            <!-- PAGE HEADER -->
+            <div class="resident-header">
+
+                <h1>Resident Management</h1>
+
+                <a href="../pages/resident_form.html" class="add-resident-btn">
+                    + Add Resident
+                </a>
+
+            </div>
+
+            <!-- OVERVIEW CARDS -->
+            <div class="resident-cards">
+
+                <div class="resident-card">
+                    <h4>Total Residents</h4>
+                    <h2>120</h2>
+                </div>
+
+                <div class="resident-card">
+                    <h4>Total Buildings</h4>
+                    <h2>03</h2>
+                </div>
+
+                <div class="resident-card">
+                    <h4>Total Blocks</h4>
+                    <h2>08</h2>
+                </div>
+
+
+            </div>
+
+            <!-- FILTER SECTION -->
+            <div class="resident-filter-section">
+                
+
+                <div class="search-box">
+
+                    <label>SEARCH RESIDENT</label>
+                    <form action="">
+                        <input type="text" placeholder="Search by resident name or apartment number">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- TABLE -->
+            <div class="resident-table-container">
+
+                <table class="resident-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Resident Name</th>
+                            <th>Apartment</th>
+                            <th>Contact Number</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <strong>Ali Khan</strong><br>
+                                <small>ID: RES-1001</small>
+                            </td>
+
+                            <td>A-102</td>
+
+                            <td>+92 300 1122334</td>
+
+
+                            <td>
+                                <span class="resident-status active-status">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="view-btn" onclick="openResidentPanel()">
+                                    View Details
+                                </button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                <strong>Sara Ahmed</strong><br>
+                                <small>ID: RES-1002</small>
+                            </td>
+
+                            <td>B-203</td>
+
+                            <td>+92 311 5566778</td>
+
+                            <td>
+                                <span class="resident-status active-status">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="view-btn" onclick="openResidentPanel()">
+                                    View Details
+                                </button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                <strong>Usman Tariq</strong><br>
+                                <small>ID: RES-1003</small>
+                            </td>
+
+                            <td>C-301</td>
+
+                            <td>+92 333 1234567</td>
+
+
+                            <td>
+                                <span class="resident-status inactive-status">
+                                    Inactive
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="view-btn" onclick="openResidentPanel()">
+                                    View Details
+                                </button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                <strong>Hina Noor</strong><br>
+                                <small>ID: RES-1004</small>
+                            </td>
+
+                            <td>D-110</td>
+
+                            <td>+92 322 8889999</td>
+
+
+                            <td>
+                                <span class="resident-status active-status">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="view-btn" onclick="openResidentPanel()">
+                                    View Details
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT DETAIL PANEL -->
+
+        <div id="residentPanel" class="resident-detail-panel hidden-panel">
+
+            <!-- CLOSE BUTTON -->
+            <button class="close-panel-btn" onclick="closeResidentPanel()">
+                ✕
+            </button>
+
+            <h2>Resident Details</h2>
+
+            <div class="detail-group">
+                <label>Resident Name</label>
+                <p id="residentName">Ali Khan</p>
+            </div>
+
+            <div class="detail-group">
+                <label>Resident ID</label>
+                <p id="residentId">RES-1001</p>
+            </div>
+
+            <div class="detail-group">
+                <label>Apartment</label>
+                <p id="residentApartment">A-102</p>
+            </div>
+
+            <div class="detail-group">
+                <label>Resident Type</label>
+                <p id="residentType">Owner</p>
+            </div>
+
+            <div class="detail-group">
+                <label>Phone Number</label>
+                <p id="residentPhone">+92 300 1122334</p>
+            </div>
+
+            <div class="detail-group">
+                <label>Email Address</label>
+                <p id="residentEmail">alikhan@email.com</p>
+            </div>
+
+            <div class="detail-group">
+                <label>Status</label>
+                <p id="residentStatus">Active</p>
+            </div>
+
+        </div>
+
+        <div id="footer"></div>
+
+    </div>
+
+    <script src="../js/include.js"></script>
+    <script src="../js/resident.js"></script>
+
+</body>
+
+</html>

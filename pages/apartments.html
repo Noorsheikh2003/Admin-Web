@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/apartments.css">
+</head>
+
+<body onload="loadLayout()">
+
+    <div id="sidebar"></div>
+
+    <div class="main">
+
+        <div id="navbar"></div>
+
+        <div class="content">
+
+            <!-- HEADER -->
+            <div class="apartment-header">
+
+                <div>
+                    <h1>Flats / Apartments</h1>
+                    <p>
+                        Manage residential units, ownership, and occupancy status.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- OVERVIEW CARDS -->
+            <div class="apartment-cards">
+
+                <div class="apartment-card">
+                    <h4>Total Units</h4>
+                    <h2>420</h2>
+                </div>
+
+                <div class="apartment-card">
+                    <h4>Occupied</h4>
+                    <h2>385</h2>
+                </div>
+
+                <div class="apartment-card">
+                    <h4>Vacant</h4>
+                    <h2>35</h2>
+                </div>
+
+            </div>
+
+            <!-- SEARCH -->
+            <div class="apartment-search">
+
+                <input type="text" placeholder="Search by flat number, owner or tenant name...">
+
+            </div>
+
+            <!-- MAIN LAYOUT -->
+            <div class="apartment-layout">
+
+                <!-- TABLE -->
+                <div class="apartment-table-container">
+
+                    <table class="apartment-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Flat Number</th>
+                                <th>Building</th>
+                                <th>Resident Name</th>
+                                <th>Occupancy</th>
+                                <th>Actions</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td><strong>A-302</strong></td>
+
+                                <td>Sere Heights</td>
+
+                                <td>Alexander Wright</td>
+
+
+                                <td>
+                                    <span class="occupied-status">
+                                        Occupied
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn" onclick="openApartmentPanel()">
+                                        View Details
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td><strong>B-105</strong></td>
+
+                                <td>Sere Heights</td>
+
+                                <td>Eleanor Shellstrop</td>
+
+
+                                <td>
+                                    <span class="vacant-status">
+                                        Vacant
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn" onclick="openApartmentPanel()">
+                                        View Details
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td><strong>C-501</strong></td>
+
+                                <td>Sky Heights</td>
+
+                                <td>Michael Scott</td>
+
+
+
+                                <td>
+                                    <span class="vacant-status">
+                                        Vacant
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn" onclick="openApartmentPanel()">
+                                        View Details
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td><strong>A-204</strong></td>
+
+                                <td>Sky Heights</td>
+
+                                <td>Rosa Diaz</td>
+
+
+                                <td>
+                                    <span class="occupied-status">
+                                        Occupied
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn" onclick="openApartmentPanel()">
+                                        View Details
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <!-- RIGHT PANEL -->
+                <div id="apartmentPanel" class="apartment-detail-panel hidden-panel">
+
+                    <button class="close-panel-btn" onclick="closeApartmentPanel()">
+                        ✕
+                    </button>
+
+                    <h2>Flat Details</h2>
+
+                    <!-- BASIC INFO -->
+                    <div class="detail-card">
+
+                        <h3>Basic Information</h3>
+
+                        <div class="detail-grid">
+
+                            <div>
+                                <label>Flat Number</label>
+                                <p>A-302</p>
+                            </div>
+
+                            <div>
+                                <label>Building</label>
+                                <p>Sere Heights</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- OWNER -->
+                    <div class="detail-card">
+
+                        <h3>Resident Details</h3>
+
+                        <p><strong>Alexander Wright</strong></p>
+                        <small>+1 (555) 123-4567</small>
+
+                    </div>
+
+                    <!-- PARKING -->
+                    <div class="detail-card">
+
+                        <h3>Parking & Vehicle</h3>
+
+                        <div class="detail-grid">
+
+                            <div>
+                                <label>Assigned Slot</label>
+                                <p>B12</p>
+                            </div>
+
+                            <div>
+                                <label>Vehicle</label>
+                                <p>Tesla Model 3</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div id="footer"></div>
+
+        </div>
+
+        <script src="../js/include.js"></script>
+        <script src="../js/apartments.js"></script>
+
+</body>
+
+</html>

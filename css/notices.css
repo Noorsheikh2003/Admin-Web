@@ -1,0 +1,261 @@
+/* HEADER */
+.notice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.notice-header h1 {
+  font-size: 42px;
+}
+
+.create-notice-btn {
+  background: #007bff;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 14px 22px;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* CARDS */
+.notice-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 30px;
+}
+
+.notice-card {
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 14px;
+
+  padding: 25px;
+}
+
+.notice-card h4 {
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.notice-card h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.notice-card p {
+  color: #777;
+}
+
+/* SEARCH */
+.notice-search {
+  margin-bottom: 30px;
+}
+
+.notice-search input {
+  width: 100%;
+
+  padding: 16px;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  font-size: 14px;
+}
+
+/* LAYOUT */
+.notice-layout {
+  display: flex;
+  gap: 25px;
+}
+
+/* TABLE */
+.notice-table-container {
+  flex: 1;
+
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+.notice-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.notice-table thead {
+  background: #f7f7f7;
+}
+
+.notice-table th {
+  text-align: left;
+  padding: 18px;
+}
+
+.notice-table td {
+  padding: 18px;
+  border-top: 1px solid #f1f1f1;
+}
+
+.notice-table tbody tr:hover {
+  background: #fafafa;
+}
+
+/* BADGE */
+.audience-badge {
+  background: #eef3ff;
+  color: #0056d6;
+
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* BUTTON */
+.view-btn {
+  background: white;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  padding: 10px 16px;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* PANEL */
+.notice-detail-panel {
+
+  width: 380px;
+
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 16px;
+
+  padding: 25px;
+
+  position: relative;
+
+  height: fit-content;
+}
+
+/* DETAIL CARD */
+.detail-card {
+
+  border: 1px solid #f1f1f1;
+  border-radius: 14px;
+
+  padding: 20px;
+
+  margin-top: 20px;
+}
+
+.detail-card label {
+  display: block;
+
+  font-size: 12px;
+  color: #777;
+
+  margin-bottom: 10px;
+}
+
+.notice-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.detail-grid p {
+  font-weight: 600;
+}
+
+/* BUTTONS */
+.notice-buttons {
+  display: flex;
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.edit-btn,
+.delete-btn {
+
+  flex: 1;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #007bff;
+  color: white;
+}
+
+.delete-btn {
+  background: #ffeaea;
+  color: red;
+}
+
+/* CLOSE */
+.close-panel-btn {
+
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f3f3f3;
+
+  cursor: pointer;
+}
+
+.close-panel-btn:hover {
+  background: #ffeaea;
+  color: red;
+}
+
+/* HIDDEN */
+.hidden-panel {
+  display: none;
+}

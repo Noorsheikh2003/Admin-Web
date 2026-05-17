@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/staff_form.css">
+</head>
+
+<body onload="loadLayout()">
+
+    <div id="sidebar"></div>
+
+    <div class="main">
+
+        <div id="navbar"></div>
+
+        <div class="content">
+
+            <!-- HEADER -->
+            <div class="staff-form-header">
+
+                <div>
+                    <h1>Add New Staff</h1>
+                    <p>
+                        Fill in the staff details to register a new employee.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- FORM CONTAINER -->
+            <div class="staff-form-container">
+
+                <form class="staff-form">
+
+                    <div class="form-grid">
+
+                        <!-- NAME -->
+                        <div class="form-group">
+
+                            <label>Full Name *</label>
+
+                            <input type="text" placeholder="Enter full name">
+
+                        </div>
+
+                        <!-- CNIC -->
+                        <div class="form-group">
+
+                            <label>CNIC Number *</label>
+
+                            <input type="text" placeholder="35202-1234567-1">
+
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="form-group">
+
+                            <label>Email Address *</label>
+
+                            <input type="email" placeholder="staff@email.com">
+
+                        </div>
+
+                        <!-- PHONE -->
+                        <div class="form-group">
+
+                            <label>Phone Number *</label>
+
+                            <input type="text" placeholder="+92 300 1234567">
+
+                        </div>
+
+                        <!-- PROFESSION -->
+                        <div class="form-group">
+
+                            <label>Profession *</label>
+
+                            <select>
+
+                                <option>Select Profession</option>
+
+                                <option>Electrician</option>
+                                <option>Plumber</option>
+                                <option>Maintaince</option>
+                                <option>Others</option>                           
+
+                            </select>
+
+                        </div>
+
+                        <!-- PASSWORD -->
+                        <div class="form-group">
+
+                            <label>Password *</label>
+
+                            <input type="password" placeholder="Enter secure password">
+
+                        </div>
+
+                    </div>
+
+                    <!-- ADDRESS -->
+                    <div class="form-group full-width">
+
+                        <label>Address</label>
+
+                        <textarea placeholder="Enter staff address"></textarea>
+
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <div class="form-buttons">
+
+                        <button type="button" class="cancel-btn">
+                            Cancel
+                        </button>
+
+                        <button type="submit" class="submit-btn">
+                            Add Staff
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div id="footer"></div>
+
+    </div>
+
+    <script src="../js/include.js"></script>
+    <script src="../js/staff_form.js"></script>
+
+</body>
+
+</html>

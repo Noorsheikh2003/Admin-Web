@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/resident_form.css">
+</head>
+
+<body onload="loadLayout()">
+
+    <div id="sidebar"></div>
+
+    <div class="main">
+
+        <div id="navbar"></div>
+        <div class="content">
+
+            <!-- HEADER -->
+            <div class="resident-form-header">
+
+                <div>
+                    <h1>Add New Resident</h1>
+                    <p>
+                        Fill in the resident details to register a new apartment resident.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- FORM CARD -->
+            <div class="resident-form-container">
+
+                <form class="resident-form">
+
+                    <div class="form-grid">
+
+                        <!-- FULL NAME -->
+                        <div class="form-group">
+
+                            <label>Full Name *</label>
+
+                            <input type="text" placeholder="Enter resident full name">
+
+                        </div>
+
+                        <!-- CNIC -->
+                        <div class="form-group">
+
+                            <label>CNIC Number *</label>
+
+                            <input type="text" placeholder="35202-1234567-1">
+
+                        </div>
+
+                        <!-- PHONE -->
+                        <div class="form-group">
+
+                            <label>Phone Number *</label>
+
+                            <input type="text" placeholder="+92 300 1234567">
+
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="form-group">
+
+                            <label>Email Address *</label>
+
+                            <input type="email" placeholder="resident@email.com">
+
+                        </div>
+
+                        <!-- PASSWORD -->
+                        <div class="form-group">
+
+                            <label>Password *</label>
+
+                            <input type="password" placeholder="Enter secure password">
+
+                        </div>
+
+                        <!-- FLAT -->
+                        <div class="form-group">
+
+                            <label>Flat Number *</label>
+
+                            <input type="text" placeholder="Enter flat-number">
+
+                        </div>
+
+                        <!-- BLOCK -->
+                        <div class="form-group">
+
+                            <label>Block *</label>
+
+                            <select>
+
+                                <option>Select Block</option>
+
+                                <option>Block A</option>
+                                <option>Block B</option>
+                                <option>Block C</option>
+
+                            </select>
+
+                        </div>
+
+                        
+
+                        <!-- VEHICLE -->
+                        <div class="form-group">
+
+                            <label>Vehicle Number</label>
+
+                            <input type="text" placeholder="ABC-123">
+
+                        </div>
+
+                    </div>
+
+                    <!-- ADDRESS -->
+                    <div class="form-group full-width">
+
+                        <label>Permanent Address</label>
+
+                        <textarea placeholder="Enter resident permanent address"></textarea>
+
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <div class="form-buttons">
+
+                        <button type="button" class="cancel-btn">
+                            Cancel
+                        </button>
+
+                        <button type="submit" class="submit-btn">
+                            Add Resident
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+        <div id="footer"></div>
+
+    </div>
+
+    <script src="../js/include.js"></script>
+    <script src="../js/resident_form.js"></script>
+
+</body>
+
+</html>

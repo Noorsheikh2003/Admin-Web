@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bills.css">
+</head>
+
+<body onload="loadLayout()">
+
+    <div id="sidebar"></div>
+
+    <div class="main">
+
+        <div id="navbar"></div>
+
+        <div class="content">
+
+            <!-- HEADER -->
+            <div class="bill-header">
+
+                <h1>Generate Maintenance Bill</h1>
+
+                <button class="draft-btn">
+                    Draft Mode
+                </button>
+
+            </div>
+
+            <!-- MAIN CARD -->
+            <div class="bill-container">
+
+                <!-- TOP -->
+                <div class="bill-top">
+
+                    <div class="bill-icon">
+                        💳
+                    </div>
+
+                    <div>
+                        <h2>Bill Configuration</h2>
+                        <p>
+                            Select an apartment and define the billing particulars for the current cycle.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- RESIDENT DETAILS -->
+                <div class="bill-section">
+
+                    <h3>Resident Details</h3>
+
+                    <div class="bill-grid">
+
+                        <div class="bill-input-group">
+
+                            <label>Apartment / Flat *</label>
+
+                            <select>
+                                <option>Search by flat number...</option>
+                                <option>A-302</option>
+                                <option>B-105</option>
+                                <option>C-501</option>
+                            </select>
+
+                        </div>
+
+                        <div class="resident-info">
+
+                            <div class="info-box">
+                                <label>Owner Name</label>
+                                <p>Alexander Wright</p>
+                            </div>
+
+                            <div class="info-box">
+                                <label>Tenant Name</label>
+                                <p>Sarah Jenkins</p>
+                            </div>
+
+                            <div class="info-box">
+                                <label>Block / Unit</label>
+                                <p>Block A</p>
+                            </div>
+
+                            <div class="info-box">
+                                <label>Parking Slot</label>
+                                <p>B12</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- BILLING -->
+                <div class="bill-section">
+
+                    <h3>Billing Cycle & Timeline</h3>
+
+                    <div class="billing-row">
+
+                        <div class="bill-input-group">
+
+                            <label>Billing Month</label>
+
+                            <input type="text" value="March 2026">
+
+                        </div>
+
+                        <div class="bill-input-group">
+
+                            <label>Issue Date</label>
+
+                            <input type="text" value="01/04/2026">
+
+                        </div>
+
+                        <div class="bill-input-group">
+
+                            <label>Valid Till *</label>
+
+                            <input type="date">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CHARGES -->
+                <div class="bill-section">
+
+                    <h3>Service Charges & Utilities</h3>
+
+                    <div class="bill-input-group">
+
+                        <label>Maintenance Charges *</label>
+
+                        <input type="number" value="150">
+
+                    </div>
+
+                </div>
+
+                <!-- TOTAL -->
+                <div class="total-bill-card">
+
+                    <div>
+
+                        <h4>Total Bill Amount</h4>
+
+                        <p>
+                            Includes all taxes and utility levies
+                        </p>
+
+                    </div>
+
+                    <h1>$150.00</h1>
+
+                </div>
+
+                <!-- NOTES -->
+                <div class="bill-section">
+
+                    <label>Special Instructions or Notes (Optional)</label>
+
+                    <textarea
+                        placeholder="Please note the repair work done in balcony is adjusted in this month's bill..."></textarea>
+
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="bill-buttons">
+
+                    <button class="cancel-btn">
+                        Cancel
+                    </button>
+
+                    <button class="generate-btn">
+                        Generate Bill
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="footer"></div>
+
+    </div>
+
+    <script src="../js/include.js"></script>
+    <script src="../js/bills.js"></script>
+
+</body>
+
+</html>

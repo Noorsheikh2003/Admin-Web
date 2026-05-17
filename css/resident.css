@@ -1,0 +1,295 @@
+/* HEADER */
+.resident-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.resident-header h1 {
+  font-size: 34px;
+}
+
+.add-resident-btn {
+  background: #007bff;
+  color: white;
+
+  text-decoration: none;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+
+  padding: 14px 22px;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* CARDS */
+.resident-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 30px;
+}
+
+.resident-card {
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 14px;
+
+  padding: 25px;
+}
+
+.resident-card h4 {
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.resident-card h2 {
+  font-size: 34px;
+}
+
+/* FILTER */
+.resident-filter-section {
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 14px;
+
+  padding: 20px;
+
+  display: flex;
+
+  margin-bottom: 30px;
+}
+
+.search-box {
+  flex: 1;
+}
+.search-box form {
+  display: flex;
+}
+.search-box form button {
+
+  width: 100px;
+
+  margin: 0 5px;
+
+  padding: 12px 16px;
+
+  border: none;
+  border-radius: 10px;  
+
+  background: #007bff;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+.search-box form button:hover {
+
+  background: #0056d6;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 14px rgba(0, 123, 255, 0.25);
+}
+
+/* CLICK EFFECT */
+.search-box form button:active {
+
+  transform: scale(0.98);
+}
+.search-box label,
+.filter-box label {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.search-box input,
+.filter-box select {
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  font-size: 14px;
+}
+
+/* TABLE */
+.resident-table-container {
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+.resident-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resident-table thead {
+  background: #f7f7f7;
+}
+
+.resident-table th {
+  text-align: left;
+
+  padding: 18px;
+
+  font-size: 14px;
+}
+
+.resident-table td {
+  padding: 18px;
+
+  border-top: 1px solid #f1f1f1;
+}
+
+.resident-table tbody tr:hover {
+  background: #fafafa;
+}
+
+/* STATUS */
+.resident-status {
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.active-status {
+  background: #e5f7eb;
+  color: #0c7a35;
+}
+
+.inactive-status {
+  background: #f2f2f2;
+  color: #666;
+}
+
+/* BUTTON */
+.view-btn {
+  background: white;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  padding: 10px 16px;
+
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.view-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* RIGHT PANEL */
+.resident-detail-panel {
+
+  position: fixed;
+
+  top: 70px;
+  right: 20px;
+
+  width: 340px;
+  height: calc(100vh - 100px);
+
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 16px;
+
+  padding: 25px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  overflow-y: auto;
+
+  z-index: 999;
+}
+
+/* TITLE */
+.resident-detail-panel h2 {
+  margin-bottom: 25px;
+}
+
+/* CLOSE BUTTON */
+.close-panel-btn {
+
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f3f3f3;
+
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.close-panel-btn:hover {
+  background: #ffebeb;
+  color: red;
+}
+
+/* DETAIL GROUP */
+.detail-group {
+  margin-bottom: 20px;
+}
+
+.detail-group label {
+
+  display: block;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #777;
+
+  margin-bottom: 6px;
+}
+
+.detail-group p {
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #111;
+}
+
+/* HIDE PANEL */
+.hidden-panel {
+  display: none;
+}

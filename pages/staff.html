@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/staff.css">
+</head>
+
+<body onload="loadLayout()">
+
+    <div id="sidebar"></div>
+
+    <div class="main">
+
+        <div id="navbar"></div>
+
+        <div class="content">
+
+            <!-- HEADER -->
+            <div class="staff-header">
+
+                <h1>Staff Management</h1>
+
+                <a href="../pages/staff_form.html" class="add-staff-btn">
+                    + Add Staff
+                </a>
+
+            </div>
+
+            <!-- CARDS -->
+            <div class="staff-cards">
+
+                <div class="staff-card">
+                    <h4>Total Staff</h4>
+                    <h2>48</h2>
+                </div>
+
+                <div class="staff-card">
+                    <h4>Available Staff</h4>
+                    <h2>12</h2>
+                </div>
+
+                <div class="staff-card">
+                    <h4>Busy (Assigned)</h4>
+                    <h2>26</h2>
+                </div>
+
+                <div class="staff-card">
+                    <h4>Tasks In Progress</h4>
+                    <h2>10</h2>
+                </div>
+
+            </div>
+
+            <!-- FILTER -->
+            <div class="staff-filter-section">
+
+                
+                <div class="search-box">
+
+                    <label>SEARCH WORKFORCE</label>
+
+                    <input type="text" placeholder="Search by name, role, or contact number">
+
+                </div>
+
+                <div class="filter-box">
+
+                    <label>FILTER BY ROLE</label>
+
+                    <select>
+                        <option>All Roles</option>
+                        <option>Electrician</option>
+                        <option>Plumber</option>
+                        <option>Maintainance</option>
+                        <option>Other</option>
+                    </select>
+
+                </div>
+
+                <div class="filter-box">
+
+                    <label>FILTER BY STATUS</label>
+
+                    <select>
+                        <option>All Status</option>
+                        <option>Available</option>
+                        <option>Assigned</option>
+                    </select>
+
+                </div>
+
+                <div class="filter-box-search">
+                    <button type="submit">Search</button>
+                </div>
+                
+            </div>
+
+            <!-- TABLE -->
+            <div class="staff-table-container">
+
+                <table class="staff-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Staff Member</th>
+                            <th>Role</th>
+                            <th>Contact Number</th>
+                            <th>Assigned Tasks</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <strong>Marcus Chen</strong><br>
+                                <small>ID: EMP-11240</small>
+                            </td>
+
+                            <td>Electrician</td>
+
+                            <td>+1 (555) 012-3456</td>
+
+                            <td>2</td>
+
+                            <td>
+                                <span class="staff-status progress-status">
+                                    In Progress
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="view-btn" onclick="openStaffPanel()">
+                                    View Details
+                                </button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                <strong>Sarah Jenkins</strong><br>
+                                <small>ID: EMP-21240</small>
+                            </td>
+
+                            <td>Plumber</td>
+
+                            <td>+1 (555) 012-7890</td>
+
+                            <td>0</td>
+
+                            <td>
+                                <span class="staff-status available-status">
+                                    Available
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="view-btn" onclick="openStaffPanel()">
+                                    View Details
+                                </button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                <strong>Robert Wilson</strong><br>
+                                <small>ID: EMP-31240</small>
+                            </td>
+
+                            <td>HVAC Specialist</td>
+
+                            <td>+1 (555) 012-1122</td>
+
+                            <td>1</td>
+
+                            <td>
+                                <span class="staff-status assigned-status">
+                                    Assigned
+                                </span>
+                            </td>
+
+                            <td>
+                                <button class="view-btn" onclick="openStaffPanel()">
+                                    View Details
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- RIGHT PANEL -->
+            <div id="staffPanel" class="staff-detail-panel hidden-panel">
+
+                <button class="close-panel-btn" onclick="closeStaffPanel()">
+                    ✕
+                </button>
+
+                <h2>Staff Details</h2>
+
+                <div class="detail-group">
+                    <label>Staff Name</label>
+                    <p>Marcus Chen</p>
+                </div>
+
+                <div class="detail-group">
+                    <label>Employee ID</label>
+                    <p>EMP-11240</p>
+                </div>
+
+                <div class="detail-group">
+                    <label>Role</label>
+                    <p>Electrician</p>
+                </div>
+
+                <div class="detail-group">
+                    <label>Phone Number</label>
+                    <p>+1 (555) 012-3456</p>
+                </div>
+
+                <div class="detail-group">
+                    <label>Status</label>
+                    <p>In Progress</p>
+                </div>
+
+                <div class="detail-group">
+                    <label>Assigned Tasks</label>
+                    <p>2 Active Tasks</p>
+                </div>
+
+            </div>
+
+            <div id="footer"></div>
+
+        </div>
+
+        <script src="../js/include.js"></script>
+        <script src="../js/staff.js"></script>
+
+</body>
+
+</html>

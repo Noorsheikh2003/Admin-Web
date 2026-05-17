@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body onload="loadLayout()">
+
+  <div id="sidebar"></div>
+
+  <div class="main">
+
+    <div id="navbar"></div>
+
+    <div class="content">
+
+      <!-- WELCOME -->
+      <div class="welcome-card">
+
+        <div>
+          <h1>Welcome Admin</h1>
+          <p>
+            Manage residents, staff, complaints and apartment records easily.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- QUICK ACTION -->
+      <h2 class="section-title">Quick Actions</h2>
+
+      <div class="quick-actions">
+
+        <div class="action-box">
+          <div class="action-icon-box">
+            <span class="action-icon">👥︎</span>
+          </div>
+          <h3>Add Resident</h3>
+        </div>
+
+        <div class="action-box">
+          <div class="action-icon-box">
+            <span class="action-icon">👨︎</span>
+          </div>
+          <h3>Add Staff</h3>
+        </div>
+
+        <div class="action-box">
+          <div class="action-icon-box">
+            <span class="action-icon">💳︎</span>
+          </div>
+          <h3>Generate Bills</h3>
+        </div>
+
+        <div class="action-box">
+          <div class="action-icon-box">
+            <span class="action-icon">📢︎</span>
+          </div>
+          <h3>Create Notices</h3>
+        </div>
+
+        <div class="action-box">
+          <div class="action-icon-box">
+            <span class="action-icon">⚠︎</span>
+          </div>
+          <h3>View Complaints</h3>
+        </div>
+
+      </div>
+
+      <!-- SYSTEM OVERVIEW -->
+      <h2 class="section-title">System Overview</h2>
+
+      <div class="overview-grid">
+
+        <div class="overview-card">
+          <p>Total Flats</p>
+          <h2>120</h2>
+        </div>
+
+        <div class="overview-card">
+          <p>Total Blocks</p>
+          <h2>08</h2>
+        </div>
+
+        <div class="overview-card">
+          <p>Total Staff</p>
+          <h2>18</h2>
+        </div>
+
+        <div class="overview-card">
+          <p>Pending Complaints</p>
+          <h2>14</h2>
+        </div>
+
+        <div class="overview-card">
+          <p>Pending Payments</p>
+          <h2>09</h2>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RECENT COMPLAINTS -->
+
+    <!-- RECENT COMPLAINTS -->
+
+    <div class="complaint-table-container">
+      <h2 class="section-title">Recent Complaints</h2>
+
+      <table class="complaint-table">
+
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Resident</th>
+            <th>Apartment</th>
+            <th>Complaint</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>C-101</td>
+            <td>Ali Khan</td>
+            <td>A-102</td>
+            <td>Water leakage issue</td>
+            <td><span class="status pending">Pending</span></td>
+          </tr>
+
+          <tr>
+            <td>C-102</td>
+            <td>Sara Ahmed</td>
+            <td>B-203</td>
+            <td>Lift not working</td>
+            <td><span class="status resolved">Resolved</span></td>
+          </tr>
+
+          <tr>
+            <td>C-103</td>
+            <td>Usman Tariq</td>
+            <td>C-301</td>
+            <td>Parking problem</td>
+            <td><span class="status inprogress">In Progress</span></td>
+          </tr>
+
+          <tr>
+            <td>C-104</td>
+            <td>Hina Noor</td>
+            <td>D-110</td>
+            <td>Electricity issue</td>
+            <td><span class="status pending">Pending</span></td>
+          </tr>
+
+          <tr>
+            <td>C-105</td>
+            <td>Ahmed Raza</td>
+            <td>A-401</td>
+            <td>Internet issue</td>
+            <td><span class="status resolved">Resolved</span></td>
+          </tr>
+
+          <tr>
+            <td>C-106</td>
+            <td>Zain Ali</td>
+            <td>B-111</td>
+            <td>Broken window</td>
+            <td><span class="status pending">Pending</span></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <!-- EDIT MODAL -->
+    <div id="editModal" class="modal-overlay hidden">
+
+      <div class="modal-box">
+
+        <button class="close-btn" onclick="closeEditModal()">✖</button>
+
+        <h3>Edit Record</h3>
+
+        <div class="form-group">
+          <label>Customer</label>
+          <input type="text" id="editCustomer">
+        </div>
+
+        <div class="form-group">
+          <label>Route</label>
+          <input type="text" id="editRoute">
+        </div>
+
+        <div class="form-group">
+          <label>Freight</label>
+          <input type="text" id="editFreight">
+        </div>
+
+        <div class="form-group">
+          <label>Status</label>
+          <input type="text" id="editStatus">
+        </div>
+
+        <button class="save-btn" onclick="saveEdit()">Save Changes</button>
+
+      </div>
+
+    </div>
+
+    <div id="footer"></div>
+
+  </div>
+
+  <script src="../js/include.js"></script>
+  <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

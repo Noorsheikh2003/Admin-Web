@@ -1,0 +1,273 @@
+/* HEADER */
+.complaint-header {
+  margin-bottom: 30px;
+}
+
+.complaint-header h1 {
+  font-size: 42px;
+}
+
+/* CARDS */
+.complaint-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 30px;
+}
+
+.complaint-card {
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 14px;
+
+  padding: 25px;
+}
+
+.complaint-card h4 {
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.complaint-card h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.complaint-card p {
+  color: #777;
+}
+
+/* SEARCH */
+.complaint-search {
+  margin-bottom: 30px;
+}
+
+.complaint-search input {
+  width: 100%;
+
+  padding: 16px;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  font-size: 14px;
+}
+
+/* LAYOUT */
+.complaint-layout {
+  display: flex;
+  gap: 25px;
+}
+
+/* TABLE */
+.complaint-table-container {
+  flex: 1;
+
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+.complaint-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.complaint-table thead {
+  background: #f7f7f7;
+}
+
+.complaint-table th {
+  text-align: left;
+  padding: 18px;
+}
+
+.complaint-table td {
+  padding: 18px;
+  border-top: 1px solid #f1f1f1;
+}
+
+.complaint-table tbody tr:hover {
+  background: #fafafa;
+}
+
+/* BADGE */
+.category-badge {
+  background: #f2f2f2;
+
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+}
+
+/* BUTTON */
+.view-btn {
+  background: white;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  padding: 10px 16px;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* PANEL */
+.complaint-detail-panel {
+
+  width: 380px;
+
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 16px;
+
+  padding: 25px;
+
+  position: relative;
+
+  height: fit-content;
+}
+
+/* TRACKING */
+.tracking-section {
+  margin-top: 25px;
+}
+
+.tracking-section h3 {
+  margin-bottom: 20px;
+}
+
+.tracking-steps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step {
+  background: #f3f3f3;
+
+  padding: 10px 14px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.active-step {
+  background: #e8f1ff;
+  color: #0056d6;
+}
+
+/* DETAIL CARD */
+.detail-card {
+
+  border: 1px solid #f1f1f1;
+  border-radius: 14px;
+
+  padding: 20px;
+
+  margin-top: 20px;
+}
+
+.detail-card h3 {
+  margin-bottom: 16px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.detail-grid label {
+  display: block;
+
+  font-size: 12px;
+  color: #777;
+
+  margin-bottom: 5px;
+}
+
+.detail-grid p {
+  font-weight: 600;
+}
+
+/* ATTACHMENTS */
+.attachment-images {
+  display: flex;
+  gap: 12px;
+}
+
+.attachment-images img {
+  width: 90px;
+  height: 90px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+}
+
+/* ASSIGN */
+.assign-btn {
+  width: 100%;
+
+  margin-top: 25px;
+
+  background: #007bff;
+  color: white;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 16px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* CLOSE */
+.close-panel-btn {
+
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f3f3f3;
+
+  cursor: pointer;
+}
+
+.close-panel-btn:hover {
+  background: #ffeaea;
+  color: red;
+}
+
+/* HIDE */
+.hidden-panel {
+  display: none;
+}

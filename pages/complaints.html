@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/complaints.css">
+</head>
+
+<body onload="loadLayout()">
+
+    <div id="sidebar"></div>
+
+    <div class="main">
+
+        <div id="navbar"></div>
+
+        <div class="content">
+
+            <!-- HEADER -->
+            <div class="complaint-header">
+
+                <h1>Complaints</h1>
+
+            </div>
+
+            <!-- OVERVIEW CARDS -->
+            <div class="complaint-cards">
+
+                <div class="complaint-card">
+                    <h4>Total Complaints</h4>
+                    <h2>124</h2>
+                    <p>+12 from last week</p>
+                </div>
+
+                <div class="complaint-card">
+                    <h4>Pending Triage</h4>
+                    <h2>18</h2>
+                    <p>Immediate action required</p>
+                </div>
+
+                <div class="complaint-card">
+                    <h4>Resolved Today</h4>
+                    <h2>32</h2>
+                    <p>94% satisfaction rate</p>
+                </div>
+
+            </div>
+
+            <!-- SEARCH -->
+            <div class="complaint-search">
+
+                <input type="text" placeholder="Search by flat, title, or user...">
+
+            </div>
+
+            <!-- MAIN LAYOUT -->
+            <div class="complaint-layout">
+
+                <!-- TABLE -->
+                <div class="complaint-table-container">
+
+                    <table class="complaint-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Complaint Title</th>
+                                <th>Flat No.</th>
+                                <th>Submitted By</th>
+                                <th>Category</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <strong>Kitchen Sink Leakage</strong><br>
+                                    <small>#CMP-1021</small>
+                                </td>
+
+                                <td>A-402</td>
+
+                                <td>Eleanor Rigby</td>
+
+                                <td>
+                                    <span class="category-badge">
+                                        Plumbing
+                                    </span>
+                                </td>
+
+                                <td>Oct 24, 2023</td>
+
+                                <td>
+                                    <button class="view-btn" onclick="openComplaintPanel()">
+                                        View Details
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <strong>Bedroom Light Flickering</strong><br>
+                                    <small>#CMP-1022</small>
+                                </td>
+
+                                <td>C-105</td>
+
+                                <td>John Lennon</td>
+
+                                <td>
+                                    <span class="category-badge">
+                                        Electrical
+                                    </span>
+                                </td>
+
+                                <td>Oct 25, 2023</td>
+
+                                <td>
+                                    <button class="view-btn" onclick="openComplaintPanel()">
+                                        View Details
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <strong>Broken Window Latch</strong><br>
+                                    <small>#CMP-1023</small>
+                                </td>
+
+                                <td>B-212</td>
+
+                                <td>Paul McCartney</td>
+
+                                <td>
+                                    <span class="category-badge">
+                                        Maintenance
+                                    </span>
+                                </td>
+
+                                <td>Oct 26, 2023</td>
+
+                                <td>
+                                    <button class="view-btn" onclick="openComplaintPanel()">
+                                        View Details
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <strong>Parking Spot Unauthorized Vehicle</strong><br>
+                                    <small>#CMP-1025</small>
+                                </td>
+
+                                <td>P-12</td>
+
+                                <td>Ringo Starr</td>
+
+                                <td>
+                                    <span class="category-badge">
+                                        Parking
+                                    </span>
+                                </td>
+
+                                <td>Oct 27, 2023</td>
+
+                                <td>
+                                    <button class="view-btn" onclick="openComplaintPanel()">
+                                        View Details
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <!-- RIGHT PANEL -->
+                <div id="complaintPanel" class="complaint-detail-panel hidden-panel">
+
+                    <button class="close-panel-btn" onclick="closeComplaintPanel()">
+                        ✕
+                    </button>
+
+                    <h2>Complaint Details</h2>
+
+                    <!-- TRACKING -->
+                    <div class="tracking-section">
+
+                        <h3>Progress Tracking</h3>
+
+                        <div class="tracking-steps">
+
+                            <div class="step active-step">
+                                Submitted
+                            </div>
+
+                            <div class="step active-step">
+                                Assigned
+                            </div>
+
+                            <div class="step">
+                                Fixed
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- INFO -->
+                    <div class="detail-card">
+
+                        <div class="detail-grid">
+
+                            <div>
+                                <label>Flat Number</label>
+                                <p>A-402</p>
+                            </div>
+
+                            <div>
+                                <label>Category</label>
+                                <p>Plumbing</p>
+                            </div>
+
+                            <div>
+                                <label>Submitted By</label>
+                                <p>Eleanor Rigby</p>
+                            </div>
+
+                            <div>
+                                <label>Submitted Date</label>
+                                <p>Oct 24, 2023</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <div class="detail-card">
+
+                        <h3>Description</h3>
+
+                        <p>
+                            Water is continuously dripping from the main pipe under the sink.
+                            It's causing a small puddle on the wooden cabinet floor.
+                        </p>
+
+                    </div>
+
+                    <!-- ATTACHMENTS -->
+                    <div class="detail-card">
+
+                        <h3>Attachments</h3>
+
+                        <div class="attachment-images">
+
+                            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=600" alt="">
+
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=600" alt="">
+
+                        </div>
+
+                    </div>
+
+                    <!-- STAFF -->
+                    <div class="detail-card">
+
+                        <h3>Assigned Staff</h3>
+
+                        <p><strong>Marcus Johnson</strong></p>
+                        <small>Senior Technician · Plumber</small>
+
+                    </div>
+
+                    <!-- BUTTON -->
+                    <button class="assign-btn">
+                        Assign Staff
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div id="footer"></div>
+
+    </div>
+
+    <script src="../js/include.js"></script>
+    <script src="../js/complaints.js"></script>
+
+</body>
+
+</html>

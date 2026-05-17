@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/notices.css">
+</head>
+
+<body onload="loadLayout()">
+
+    <div id="sidebar"></div>
+
+    <div class="main">
+
+        <div id="navbar"></div>
+
+        <div class="content">
+
+            <!-- HEADER -->
+            <div class="notice-header">
+
+                <h1>Notices</h1>
+
+                <button class="create-notice-btn">
+                    + Create Notice
+                </button>
+
+            </div>
+
+            <!-- OVERVIEW -->
+            <div class="notice-cards">
+
+                <div class="notice-card">
+                    <h4>Total Notices</h4>
+                    <h2>42</h2>
+                    <p>Published notices</p>
+                </div>
+
+                <div class="notice-card">
+                    <h4>Active Notices</h4>
+                    <h2>16</h2>
+                    <p>Visible to residents</p>
+                </div>
+
+                <div class="notice-card">
+                    <h4>Expired Notices</h4>
+                    <h2>26</h2>
+                    <p>Archived notices</p>
+                </div>
+
+            </div>
+
+            <!-- SEARCH -->
+            <div class="notice-search">
+
+                <input type="text" placeholder="Search notices by title or description...">
+
+            </div>
+
+            <!-- MAIN LAYOUT -->
+            <div class="notice-layout">
+
+                <!-- TABLE -->
+                <div class="notice-table-container">
+
+                    <table class="notice-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Notice Title</th>
+                                <th>Description</th>
+                                <th>Audience</th>
+                                <th>Publish Date</th>
+                                <th>Actions</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <strong>Water Supply Maintenance</strong><br>
+                                    <small>#NOT-1021</small>
+                                </td>
+
+                                <td>
+                                    Water supply will remain unavailable from 10AM to 2PM.
+                                </td>
+
+                                <td>
+                                    <span class="audience-badge">
+                                        All Residents
+                                    </span>
+                                </td>
+
+                                <td>May 10, 2026</td>
+
+                                <td>
+                                    <button class="view-btn" onclick="openNoticePanel()">
+                                        View Details
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <strong>Parking Area Cleaning</strong><br>
+                                    <small>#NOT-1022</small>
+                                </td>
+
+                                <td>
+                                    Basement parking area cleaning scheduled for Sunday.
+                                </td>
+
+                                <td>
+                                    <span class="audience-badge">
+                                        All Residents
+                                    </span>
+                                </td>
+
+                                <td>May 11, 2026</td>
+
+                                <td>
+                                    <button class="view-btn" onclick="openNoticePanel()">
+                                        View Details
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <strong>Lift Maintenance</strong><br>
+                                    <small>#NOT-1023</small>
+                                </td>
+
+                                <td>
+                                    Block B lift maintenance work will start tomorrow.
+                                </td>
+
+                                <td>
+                                    <span class="audience-badge">
+                                        Block B Residents
+                                    </span>
+                                </td>
+
+                                <td>May 12, 2026</td>
+
+                                <td>
+                                    <button class="view-btn" onclick="openNoticePanel()">
+                                        View Details
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <!-- RIGHT PANEL -->
+                <div id="noticePanel" class="notice-detail-panel hidden-panel">
+
+                    <button class="close-panel-btn" onclick="closeNoticePanel()">
+                        ✕
+                    </button>
+
+                    <h2>Notice Details</h2>
+
+                    <!-- DETAIL -->
+                    <div class="detail-card">
+
+                        <label>Notice Title</label>
+
+                        <p class="notice-title">
+                            Water Supply Maintenance
+                        </p>
+
+                    </div>
+
+                    <div class="detail-card">
+
+                        <label>Description</label>
+
+                        <p>
+                            Water supply will remain unavailable from 10AM to 2PM due to
+                            maintenance work in the main pipeline area. Residents are requested
+                            to store enough water before the maintenance begins.
+                        </p>
+
+                    </div>
+
+                    <div class="detail-card">
+
+                        <div class="detail-grid">
+
+                            <div>
+                                <label>Audience</label>
+                                <p>All Residents</p>
+                            </div>
+
+                            <div>
+                                <label>Publish Date</label>
+                                <p>May 10, 2026</p>
+                            </div>
+
+                            <div>
+                                <label>Status</label>
+                                <p>Published</p>
+                            </div>
+
+                            <div>
+                                <label>Created By</label>
+                                <p>Admin</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <div class="notice-buttons">
+
+                        <button class="edit-btn">
+                            Edit Notice
+                        </button>
+
+                        <button class="delete-btn">
+                            Delete
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div id="footer"></div>
+
+    </div>
+
+    <script src="../js/include.js"></script>
+    <script src="../js/notices.js"></script>
+
+</body>
+
+</html>
