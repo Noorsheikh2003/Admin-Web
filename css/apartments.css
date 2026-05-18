@@ -39,21 +39,6 @@
   font-size: 34px;
 }
 
-/* SEARCH */
-.apartment-search {
-  margin-bottom: 25px;
-}
-
-.apartment-search input {
-  width: 100%;
-
-  padding: 16px;
-
-  border: 1px solid #ddd;
-  border-radius: 12px;
-
-  font-size: 14px;
-}
 
 /* LAYOUT */
 .apartment-layout {
