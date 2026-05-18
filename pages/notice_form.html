@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Notice_Form</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/notice_form.css">
+</head>
+
+<body onload="loadLayout()">
+
+    <div id="sidebar"></div>
+
+    <div class="main">
+
+        <div id="navbar"></div>
+        <div class="content">
+
+            <!-- HEADER -->
+            <div class="notice-form-header">
+
+                <div>
+                    <h1>Create Notice</h1>
+                    <p>
+                        Create and publish notices for residents.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- FORM CONTAINER -->
+            <div class="notice-form-container">
+
+                <form class="notice-form">
+
+                    <div class="form-grid">
+
+                        <!-- TITLE -->
+                        <div class="form-group full-width">
+
+                            <label>Notice Title *</label>
+
+                            <input type="text" placeholder="Enter notice title">
+
+                        </div>
+
+                        <!-- CATEGORY -->
+                        <div class="form-group">
+
+                            <label>Category *</label>
+
+                            <select>
+
+                                <option>Select Category</option>
+
+                                <option>Water</option>
+                                <option>Electricity</option>
+                                <option>Maintenance</option>
+                                <option>General</option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- AUDIENCE -->
+                        <div class="form-group">
+
+                            <label>Assign To *</label>
+
+                            <select>
+
+                                <option>All Residents</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <div class="form-group full-width">
+
+                        <label>Description *</label>
+
+                        <textarea placeholder="Enter notice description..."></textarea>
+
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <div class="form-buttons">
+
+                        <button type="button" class="cancel-btn">
+                            Cancel
+                        </button>
+
+                        <button type="submit" class="submit-btn">
+                            Publish Notice
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div id="footer"></div>
+
+    </div>
+
+    <script src="../js/include.js"></script>
+    <script src="../js/notice_form.js"></script>
+
+</body>
+
+</html>
