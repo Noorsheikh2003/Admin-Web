@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Notice_Form</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/parkingform.css">
+</head>
+
+<body onload="loadLayout()">
+
+    <div id="sidebar"></div>
+
+    <div class="main">
+
+        <div id="navbar"></div>
+        <div class="content">
+
+            <!-- HEADER -->
+            <div class="notice-form-header">
+
+                <div>
+                    <h1>Create Parking Slot</h1>
+                    <p>
+                        Create the parking slot for the residence.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- FORM CONTAINER -->
+            <div class="notice-form-container">
+
+                <form class="notice-form">
+
+                    <div class="form-grid">
+
+                        <!-- TITLE -->
+                        <div class="form-group full-width">
+
+                            <label>Parking Slot *</label>
+
+                            <input type="text" placeholder="Enter slot no">
+
+                        </div>
+
+                        <div class="form-group full-width">
+
+                            <label>Vechile No *</label>
+
+                            <input type="text" placeholder="Enter vechile no">
+
+                        </div>
+
+                        <!-- CATEGORY -->
+                        <div class="form-group">
+
+                            <label>Appartment *</label>
+
+                            <select>
+
+                                <option>Select Category</option>
+
+                                <option>A-364</option>
+                                <option>A-754</option>
+                                <option>A-123</option>
+                                <option>A-267</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Resident</label>
+
+                            <input type="text" placeholder="Enter resident">
+
+                        </div>
+                        
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <div class="form-group full-width">
+
+                        <label>Description</label>
+
+                        <textarea placeholder="Enter parking description..."></textarea>
+
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <div class="form-buttons">
+
+                        <button type="button" class="cancel-btn">
+                            Cancel
+                        </button>
+
+                        <button type="submit" class="submit-btn">
+                            Save Slot
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div id="footer"></div>
+
+    </div>
+
+    <script src="../js/include.js"></script>
+    <!-- <script src=""></script> -->
+
+</body>
+
+</html>

@@ -6,7 +6,7 @@
     <title>Dashboard</title>
 
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/staff.css">
+    <link rel="stylesheet" href="../css/billss.css">
 </head>
 
 <body onload="loadLayout()">
@@ -22,10 +22,10 @@
             <!-- HEADER -->
             <div class="staff-header">
 
-                <h1>Staff Management</h1>
+                <h1>Bills Management</h1>
 
-                <a href="../pages/staff_form.html" class="add-staff-btn">
-                    + Add Staff
+                <a href="../pages/bills.html" class="add-staff-btn">
+                    + Add Bills
                 </a>
 
             </div>
@@ -34,50 +34,31 @@
             <div class="staff-cards">
 
                 <div class="staff-card">
-                    <h4>Total Staff</h4>
-                    <h2>48</h2>
+                    <h4>Total Bills</h4>
+                    <h2>24</h2>
                 </div>
 
                 <div class="staff-card">
-                    <h4>Available Staff</h4>
+                    <h4>Paid Bills</h4>
                     <h2>12</h2>
                 </div>
 
                 <div class="staff-card">
-                    <h4>Busy (Assigned)</h4>
+                    <h4>Remaining Bills</h4>
                     <h2>26</h2>
                 </div>
 
-                <div class="staff-card">
-                    <h4>Tasks In Progress</h4>
-                    <h2>10</h2>
-                </div>
 
             </div>
 
             <!-- FILTER -->
             <div class="staff-filter-section">
 
-                
                 <div class="search-box">
 
-                    <label>SEARCH STAFF</label>
+                    <label>SEARCH BILLS</label>
 
-                    <input type="text" placeholder="Search by name, role, or contact number">
-
-                </div>
-
-                <div class="filter-box">
-
-                    <label>FILTER BY ROLE</label>
-
-                    <select>
-                        <option>All Roles</option>
-                        <option>Electrician</option>
-                        <option>Plumber</option>
-                        <option>Maintainance</option>
-                        <option>Other</option>
-                    </select>
+                    <input type="text" placeholder="Search by bill id, appartment, resident or status">
 
                 </div>
 
@@ -86,18 +67,29 @@
                     <label>FILTER BY STATUS</label>
 
                     <select>
-                        <option>All Status</option>
-                        <option>Available</option>
-                        <option>In Progress</option>
-                        <option>Assigned</option>
+                        <option>All Bills</option>
+                        <option>Paid</option>
+                        <option>Unpaid</option>
                     </select>
 
                 </div>
 
+                <!-- <div class="filter-box">
+
+                    <label>FILTER BY STATUS</label>
+
+                    <select>
+                        <option>All Status</option>
+                        <option>Available</option>
+                        <option>Assigned</option>
+                    </select>
+
+                </div> -->
+
                 <div class="filter-box-search">
                     <button type="submit">Search</button>
                 </div>
-                
+
             </div>
 
             <!-- TABLE -->
@@ -108,12 +100,12 @@
                     <thead>
 
                         <tr>
-                            <th>Staff Member</th>
-                            <th>Role</th>
-                            <th>Contact Number</th>
-                            <th>Assigned Tasks</th>
+                            <th>Bill Id</th>
+                            <th>Appartment</th>
+                            <th>Resident Name</th>
+                            <th>Date</th>
+                            <th>Amount</th>
                             <th>Status</th>
-                            <th>Actions</th>
                         </tr>
 
                     </thead>
@@ -123,26 +115,19 @@
                         <tr>
 
                             <td>
-                                <strong>Marcus Chen</strong><br>
-                                <small>ID: EMP-11240</small>
+                                <strong>Bill-001</strong><br>
                             </td>
 
-                            <td>Electrician</td>
+                            <td>A-302</td>
 
-                            <td>+1 (555) 012-3456</td>
+                            <td>Noor Ali Sheikh</td>
 
-                            <td>2</td>
+                            <td>02-June-2026</td>
 
-                            <td>
-                                <span class="staff-status progress-status">
-                                    In Progress
-                                </span>
-                            </td>
+                            <td>15000</td>
 
                             <td>
-                                <button class="view-btn" onclick="openStaffPanel()">
-                                    View Details
-                                </button>
+                                <span class="badge badge-paid">Paid</span>
                             </td>
 
                         </tr>
@@ -150,26 +135,19 @@
                         <tr>
 
                             <td>
-                                <strong>Sarah Jenkins</strong><br>
-                                <small>ID: EMP-21240</small>
+                                <strong>Bill-002</strong><br>
                             </td>
 
-                            <td>Plumber</td>
+                            <td>A-201</td>
 
-                            <td>+1 (555) 012-7890</td>
+                            <td>Zulnoorain Bilal</td>
 
-                            <td>0</td>
+                            <td>10-June-2026</td>
 
-                            <td>
-                                <span class="staff-status available-status">
-                                    Available
-                                </span>
-                            </td>
+                            <td>20000</td>
 
                             <td>
-                                <button class="view-btn" onclick="openStaffPanel()">
-                                    View Details
-                                </button>
+                                <span class="badge badge-unpaid">Unpaid</span>
                             </td>
 
                         </tr>
@@ -177,26 +155,19 @@
                         <tr>
 
                             <td>
-                                <strong>Robert Wilson</strong><br>
-                                <small>ID: EMP-31240</small>
+                                <strong>Bill-003</strong><br>
                             </td>
 
-                            <td>HVAC Specialist</td>
+                            <td>A-403</td>
 
-                            <td>+1 (555) 012-1122</td>
+                            <td>Abu Huraira</td>
 
-                            <td>1</td>
+                            <td>11-June-2026</td>
 
-                            <td>
-                                <span class="staff-status assigned-status">
-                                    Assigned
-                                </span>
-                            </td>
+                            <td>15000</td>
 
                             <td>
-                                <button class="view-btn" onclick="openStaffPanel()">
-                                    View Details
-                                </button>
+                                <span class="badge badge-paid">Paid</span>
                             </td>
 
                         </tr>
@@ -253,7 +224,7 @@
         </div>
 
         <script src="../js/include.js"></script>
-        <script src="../js/staff.js"></script>
+        <script src="../js/billss.js"></script>
 
 </body>
 

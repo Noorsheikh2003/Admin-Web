@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResiLink - Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f5f7fb;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+        }
+
+        /* ==========================
+   LOGIN CARD
+========================== */
+
+        .login-container {
+            width: 100%;
+            max-width: 450px;
+
+            background: #fff;
+
+            border-radius: 20px;
+
+            padding: 40px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, .08);
+
+            border: 1px solid #e5e7eb;
+        }
+
+        /* ==========================
+   LOGO
+========================== */
+
+        .logo-section {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .logo-section img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .logo-section h1 {
+            font-size: 32px;
+            color: #1976f3;
+            margin-bottom: 5px;
+        }
+
+        .logo-section p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* ==========================
+   FORM
+========================== */
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .form-group input {
+            width: 100%;
+            height: 52px;
+
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+
+            padding: 0 15px;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: #1976f3;
+        }
+
+        /* ==========================
+   PASSWORD
+========================== */
+
+        .password-wrapper {
+            position: relative;
+        }
+
+
+
+        /* ==========================
+   BUTTON
+========================== */
+
+        .login-btn {
+            width: 100%;
+            height: 54px;
+
+            border: none;
+            border-radius: 12px;
+
+            background: #1976f3;
+            color: white;
+
+            font-size: 16px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .login-btn:hover {
+            background: #0f63d8;
+        }
+
+        /* ==========================
+   FOOTER
+========================== */
+
+        .login-footer {
+            text-align: center;
+            margin-top: 25px;
+
+            color: #6b7280;
+            font-size: 13px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="logo-section">
+
+            <!-- Replace with your logo -->
+            <img src="../images/Logo.png" alt="Logo">
+
+            <h1>ResiLink</h1>
+
+            <p>Apartment Management System</p>
+
+        </div>
+
+        <form>
+
+            <div class="form-group">
+
+                <label>Username</label>
+
+                <input type="text" placeholder="Enter Username" required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Password</label>
+
+                <div class="password-wrapper">
+
+                    <input type="password" id="password" placeholder="Enter Password">
+
+                </div>
+
+            </div>
+
+            <button onclick="window.location.href='dashboard.html'" type="submit" class="login-btn">
+                Login
+            </button>
+
+        </form>
+
+        <div class="login-footer">
+            © 2026 ResiLink. All Rights Reserved.
+        </div>
+
+    </div>
+
+    <script>
+
+        const passwordField =
+            document.getElementById("password");
+
+        const togglePassword =
+            document.getElementById("togglePassword");
+
+        togglePassword.addEventListener("click", function () {
+
+            const icon = this.querySelector("i");
+
+            if (passwordField.type === "password") {
+
+                passwordField.type = "text";
+
+                icon.classList.remove("bx-show");
+                icon.classList.add("bx-hide");
+
+            } else {
+
+                passwordField.type = "password";
+
+                icon.classList.remove("bx-hide");
+                icon.classList.add("bx-show");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

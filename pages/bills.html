@@ -20,163 +20,144 @@
         <div class="content">
 
             <!-- MAIN CARD -->
-            <div class="bill-container">
+            <form action="" method="get">
+                <div class="bill-container">
 
-                <!-- TOP -->
-                <div class="bill-top">
+                    <!-- TOP -->
+                    <div class="bill-top">
 
-                    <div class="bill-icon">
-                        💳
-                    </div>
-
-                    <div>
-                        <h2>Bill Configuration</h2>
-                        <p>
-                            Select an apartment and define the billing particulars for the current cycle.
-                        </p>
-                    </div>
-
-                </div>
-
-                <!-- RESIDENT DETAILS -->
-                <div class="bill-section">
-
-                    <h3>Resident Details</h3>
-
-                    <div class="bill-grid">
-
-                        <div class="bill-input-group">
-
-                            <label>Apartment / Flat *</label>
-
-                            <select>
-                                <option>Search by flat number...</option>
-                                <option>A-302</option>
-                                <option>B-105</option>
-                                <option>C-501</option>
-                            </select>
-
+                        <div class="bill-icon">
+                            💳
                         </div>
 
-                        <div class="resident-info">
+                        <div>
+                            <h2>Bill Configuration</h2>
+                            <p>
+                                Select an apartment and define the billing particulars for the current cycle.
+                            </p>
+                        </div>
 
-                            <div class="info-box">
-                                <label>Owner Name</label>
-                                <p>Alexander Wright</p>
+                    </div>
+
+                    <!-- RESIDENT DETAILS -->
+                    <div class="bill-section">
+
+                        <h3>Resident Detail</h3>
+
+                        <div class="bill-grid">
+
+                            <div class="bill-input-group">
+
+                                <label>Apartment / Flat *</label>
+
+                                <select>
+                                    <option>Search by flat number...</option>
+                                    <option>A-302</option>
+                                    <option>B-105</option>
+                                    <option>C-501</option>
+                                </select>
+
                             </div>
 
-                            <div class="info-box">
-                                <label>Tenant Name</label>
-                                <p>Sarah Jenkins</p>
+                            <div class="resident-info">
+
+                                <div class="info-box">
+                                    <label>Resident Name</label>
+                                    <p>Noor Ali Sheikh</p>
+                                </div>
+
+
+                                <div class="info-box">
+                                    <label>Building</label>
+                                    <p>Serene Heights</p>
+                                </div>
+
+
+                                <div class="info-box">
+                                    <label>Block</label>
+                                    <p>Block A</p>
+                                </div>
+
+                                <div class="info-box">
+                                    <label>Parking Slot</label>
+                                    <p>B12</p>
+                                </div>
+
                             </div>
 
-                            <div class="info-box">
-                                <label>Block / Unit</label>
-                                <p>Block A</p>
+                        </div>
+
+                    </div>
+
+                    <!-- BILLING -->
+                    <div class="bill-section">
+
+                        <h3>Billing Timeline</h3>
+
+                        <div class="billing-row">
+
+                            <div class="bill-input-group">
+
+                                <label>Billing Month</label>
+
+                                <input type="text" value="March 2026">
+
                             </div>
 
-                            <div class="info-box">
-                                <label>Parking Slot</label>
-                                <p>B12</p>
+                            <div class="bill-input-group">
+
+                                <label>Issue Date</label>
+
+                                <input type="date">
+
+                            </div>
+
+                            <div class="bill-input-group">
+
+                                <label>Valid Till *</label>
+
+                                <input type="date">
+
                             </div>
 
                         </div>
 
                     </div>
 
-                </div>
-
-                <!-- BILLING -->
-                <div class="bill-section">
-
-                    <h3>Billing Cycle & Timeline</h3>
-
-                    <div class="billing-row">
+                    <!-- CHARGES -->
+                    <div class="bill-section">
+                        <h3>Utilities & Service Charges</h3>
 
                         <div class="bill-input-group">
+                            <label>Maintenance Charges *</label>
+                            <input type="number" id="maintenanceCharge" value="0">
+                        </div>
+                    </div>
 
-                            <label>Billing Month</label>
-
-                            <input type="text" value="March 2026">
-
+                    <!-- TOTAL -->
+                    <div class="total-bill-card">
+                        <div>
+                            <h2>Total Bill Amount</h2>
                         </div>
 
-                        <div class="bill-input-group">
+                        <h2 id="totalAmount">PKR 15000</h2>
+                    </div>
+                    <!-- BUTTONS -->
 
-                            <label>Issue Date</label>
+                    <div class="bill-buttons">
 
-                            <input type="text" value="01/04/2026">
+                        <button class="cancel-btn" type="reset">
+                            Cancel
+                        </button>
 
-                        </div>
-
-                        <div class="bill-input-group">
-
-                            <label>Valid Till *</label>
-
-                            <input type="date">
-
-                        </div>
+                        <button class="generate-btn" type="submit">
+                            Generate Bill
+                        </button>
 
                     </div>
 
                 </div>
-
-                <!-- CHARGES -->
-                <div class="bill-section">
-
-                    <h3>Service Charges & Utilities</h3>
-
-                    <div class="bill-input-group">
-
-                        <label>Maintenance Charges *</label>
-
-                        <input type="number" value="150">
-
-                    </div>
-
-                </div>
-
-                <!-- TOTAL -->
-                <div class="total-bill-card">
-
-                    <div>
-
-                        <h4>Total Bill Amount</h4>
-
-                        <p>
-                            Includes all taxes and utility levies
-                        </p>
-
-                    </div>
-
-                    <h1>$150.00</h1>
-
-                </div>
-
-                <!-- NOTES -->
-                <div class="bill-section">
-
-                    <label>Special Instructions or Notes (Optional)</label>
-
-                    <textarea
-                        placeholder="Please note the repair work done in balcony is adjusted in this month's bill..."></textarea>
-
-                </div>
-
-                <!-- BUTTONS -->
-                <div class="bill-buttons">
-
-                    <button class="cancel-btn" type="reset">
-                        Cancel
-                    </button>
-
-                    <button class="generate-btn" type="submit">
-                        Generate Bill
-                    </button>
-
-                </div>
-
-            </div>
+            </form>
 
         </div>
 

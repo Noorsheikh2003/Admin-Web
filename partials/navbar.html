@@ -2,27 +2,104 @@
 
   <!-- LOGO -->
   <div class="logo-div">
-
-    <img src="../images/logo.png" alt="Logo">
-
+    <img src="../images/Logo.png" alt="Logo">
     <h2>ResiLink</h2>
-
   </div>
 
-  <!-- RIGHT PROFILE -->
+  <!-- PROFILE -->
   <div class="navbar-sub">
 
-    <div class="profile">
+    <div class="profile" id="profileTrigger">
 
-      <img src="../images/user.jpg" alt="Admin">
+      <img src="../images/user.jpeg" alt="Admin">
 
       <div>
-        <strong>Admin</strong><br>
+        <strong>Noor Ali</strong><br>
         <small>Administrator</small>
       </div>
 
     </div>
 
   </div>
+
+</div>
+
+<!-- PROFILE MODAL -->
+<div class="profile-popup" id="profilePopup">
+
+    <div class="profile-popup-header">
+
+        <div class="profile-image-wrapper">
+
+            <img
+                src="../images/user.jpeg"
+                id="profilePreview"
+                alt="Profile"
+            >
+
+            <input
+                type="file"
+                id="profileImageInput"
+                accept="image/*"
+                hidden
+            >
+
+        </div>
+
+        <h3>Noor Ali</h3>
+        <p>Administrator</p>
+
+    </div>
+
+    <div class="profile-popup-body">
+
+        <div class="detail-row">
+            <label>Name</label>
+            <input
+                type="text"
+                class="profile-field"
+                value="Noor Ali"
+                readonly
+            >
+        </div>
+
+        <div class="detail-row">
+            <label>Role</label>
+            <input
+                type="text"
+                class="profile-field"
+                value="Administrator"
+                readonly
+            >
+        </div>
+
+        <div class="detail-row">
+            <label>Email</label>
+            <input
+                type="email"
+                class="profile-field"
+                value="admin@resilink.com"
+                readonly
+            >
+        </div>
+
+        <div class="detail-row">
+            <label>Phone</label>
+            <input
+                type="text"
+                class="profile-field"
+                value="+92 300 1234567"
+                readonly
+            >
+        </div>
+
+        <button
+            class="profile-action-btn"
+            id="editProfileBtn"
+        >
+            Edit Profile
+        </button>
+
+    </div>
 
 </div>

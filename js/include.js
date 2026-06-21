@@ -205,3 +205,102 @@ function searchData() {
 // document.addEventListener("DOMContentLoaded", function () {
 //   setupPagination();
 // });
+// ===============================
+// PROFILE POPUP OPEN / CLOSE
+// ===============================
+
+let editMode = false;
+
+document.addEventListener("click", function (e) {
+
+    const trigger = e.target.closest("#profileTrigger");
+    const popup = document.getElementById("profilePopup");
+
+    if (!popup) return;
+
+    // Open / Close Popup
+    if (trigger) {
+
+        popup.classList.toggle("show");
+        return;
+    }
+
+    // Edit Button
+    const editBtn = e.target.closest("#editProfileBtn");
+
+    if (editBtn) {
+
+        const fields =
+            document.querySelectorAll(".profile-field");
+
+        if (!editMode) {
+
+            fields.forEach(field => {
+                field.removeAttribute("readonly");
+            });
+
+            editBtn.textContent = "Save Changes";
+
+            editMode = true;
+
+        } else {
+
+            fields.forEach(field => {
+                field.setAttribute("readonly", true);
+            });
+
+            editBtn.textContent = "Edit Profile";
+
+            editMode = false;
+
+            alert("Profile Updated Successfully!");
+        }
+
+        return;
+    }
+
+    // Click Profile Image
+    const profileImage =
+        e.target.closest("#profilePreview");
+
+    if (profileImage && editMode) {
+
+        document
+            .getElementById("profileImageInput")
+            .click();
+
+        return;
+    }
+
+    // Close Popup When Click Outside
+    if (!popup.contains(e.target)) {
+
+        popup.classList.remove("show");
+    }
+});
+
+
+// ===============================
+// IMAGE PREVIEW
+// ===============================
+
+document.addEventListener("change", function (e) {
+
+    if (e.target.id !== "profileImageInput")
+        return;
+
+    const file = e.target.files[0];
+
+    if (!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = function (event) {
+
+        document.getElementById(
+            "profilePreview"
+        ).src = event.target.result;
+    };
+
+    reader.readAsDataURL(file);
+});

@@ -1,0 +1,142 @@
+/* HEADER */
+.notice-form-header {
+  margin-bottom: 30px;
+}
+
+.notice-form-header h1 {
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.notice-form-header p {
+  color: #666;
+}
+
+/* CONTAINER */
+.notice-form-container {
+
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 18px;
+
+  padding: 35px;
+}
+
+/* GRID */
+.form-grid {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+/* GROUP */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABEL */
+.form-group label {
+
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #333;
+}
+
+/* INPUTS */
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+  width: 100%;
+
+  padding: 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  font-size: 14px;
+
+  transition: 0.3s;
+}
+
+/* FOCUS */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+  border-color: #007bff;
+
+  outline: none;
+
+  box-shadow: 0 0 0 4px rgba(0,123,255,0.08);
+}
+
+/* TEXTAREA */
+.form-group textarea {
+
+  min-height: 140px;
+
+  resize: none;
+}
+
+/* FULL WIDTH */
+.full-width {
+  grid-column: span 2;
+  margin-top: 10px;
+}
+
+/* BUTTONS */
+.form-buttons {
+
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+/* CANCEL */
+.cancel-btn {
+
+  background: #f3f3f3;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 14px 28px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* SUBMIT */
+.submit-btn {
+
+  background: #007bff;
+  color: white;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 14px 28px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+
+  background: #0056d6;
+}
