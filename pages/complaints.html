@@ -59,7 +59,7 @@
 
                     <label>SEARCH COMPLAINTS</label>
                     <form action="">
-                        <input type="text" placeholder="Search by flat, title, or category">
+                        <input type="text" placeholder="Search the compliants by the flat, title, category or status">
                         <button type="submit">Search</button>
                     </form>
                 </div>
@@ -81,7 +81,7 @@
                                 <th>Flat No.</th>
                                 <th>Resident Name</th>
                                 <th>Category</th>
-                                <th>Date</th>
+                                <th>Status</th>
                                 <th>Actions</th>
                             </tr>
 
@@ -93,20 +93,17 @@
 
                                 <td>
                                     <strong>Kitchen Sink Leakage</strong><br>
-                                    <small>#CMP-1021</small>
                                 </td>
 
                                 <td>A-402</td>
 
                                 <td>Eleanor Rigby</td>
 
-                                <td>
-                                    <span class="category-badge">
-                                        Plumbing
-                                    </span>
-                                </td>
+                                <td>Plumbing</td>
 
-                                <td>Oct 24, 2023</td>
+                                <td>
+                                    <span class="badge badge-resolved">Resolved</span>
+                                </td>
 
                                 <td>
                                     <button class="view-btn" onclick="openComplaintPanel()">
@@ -120,20 +117,17 @@
 
                                 <td>
                                     <strong>Bedroom Light Flickering</strong><br>
-                                    <small>#CMP-1022</small>
                                 </td>
 
                                 <td>C-105</td>
 
                                 <td>John Lennon</td>
 
-                                <td>
-                                    <span class="category-badge">
-                                        Electrical
-                                    </span>
-                                </td>
+                                <td>Electrical</td>
 
-                                <td>Oct 25, 2023</td>
+                                <td>
+                                    <span class="badge badge-inprogress">Inprogress</span>
+                                </td>
 
                                 <td>
                                     <button class="view-btn" onclick="openComplaintPanel()">
@@ -147,20 +141,17 @@
 
                                 <td>
                                     <strong>Broken Window Latch</strong><br>
-                                    <small>#CMP-1023</small>
                                 </td>
 
                                 <td>B-212</td>
 
                                 <td>Paul McCartney</td>
 
-                                <td>
-                                    <span class="category-badge">
-                                        Maintenance
-                                    </span>
-                                </td>
+                                <td>Maintenance</td>
 
-                                <td>Oct 26, 2023</td>
+                                <td>
+                                    <span class="badge badge-pending">Pending</span>
+                                </td>
 
                                 <td>
                                     <button class="view-btn" onclick="openComplaintPanel()">
@@ -173,21 +164,18 @@
                             <tr>
 
                                 <td>
-                                    <strong>Parking Spot Unauthorized Vehicle</strong><br>
-                                    <small>#CMP-1025</small>
+                                    <strong>Unauthorized Vehicle Parked</strong><br>
                                 </td>
 
                                 <td>P-12</td>
 
                                 <td>Ringo Starr</td>
 
-                                <td>
-                                    <span class="category-badge">
-                                        Parking
-                                    </span>
-                                </td>
+                                <td>Parking</td>
 
-                                <td>Oct 27, 2023</td>
+                                <td>
+                                    <span class="badge badge-resolved">Resolved</span>
+                                </td>
 
                                 <td>
                                     <button class="view-btn" onclick="openComplaintPanel()">
@@ -211,29 +199,6 @@
                     </button>
 
                     <h2>Complaint Details</h2>
-
-                    <!-- TRACKING -->
-                    <div class="tracking-section">
-
-                        <h3>Progress Tracking</h3>
-
-                        <div class="tracking-steps">
-
-                            <div class="step active-step">
-                                Submitted
-                            </div>
-
-                            <div class="step active-step">
-                                Assigned
-                            </div>
-
-                            <div class="step">
-                                Fixed
-                            </div>
-
-                        </div>
-
-                    </div>
 
                     <!-- INFO -->
                     <div class="detail-card">
@@ -297,7 +262,7 @@
                         <h3>Assigned Staff</h3>
 
                         <p><strong>Marcus Johnson</strong></p>
-                        <small>Senior Technician · Plumber</small>
+                        <small>Plumber</small>
 
                     </div>
 

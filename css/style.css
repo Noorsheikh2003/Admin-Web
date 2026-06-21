@@ -556,7 +556,7 @@ table td {
 
     position: fixed;
 
-    top: 80px;
+    top: 60px;
     right: 20px;
 
     width: 340px;
@@ -597,8 +597,8 @@ table td {
 
 .profile-image-wrapper {
 
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
 
     margin: auto auto 15px;
 
@@ -620,7 +620,7 @@ table td {
 .profile-popup-header h3 {
 
     margin: 8px 0 3px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .profile-popup-header p {
@@ -632,7 +632,7 @@ table td {
 /* Body */
 
 .profile-popup-body {
-    padding: 20px;
+    padding: 10px;
 }
 
 .detail-row {
@@ -645,14 +645,14 @@ table td {
 
     margin-bottom: 6px;
 
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
 }
 
 .detail-row input {
 
     width: 100%;
-    height: 44px;
+    height: 30px;
 
     border: 1px solid #dcdcdc;
 
